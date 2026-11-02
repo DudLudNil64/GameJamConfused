@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     // Class veriables
-    float MoveSpeed;
+    [SerializeField] float MoveSpeed;
 
     // Player Components
     Rigidbody2D PlayerBody;
@@ -27,10 +27,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Read input
+        // Read input -Lud
         Vector2 MoveRead = MovementInput.ReadValue<Vector2>();
-
-        // Adds force to move the player
-        PlayerBody.AddForce(MoveRead * MoveSpeed, ForceMode2D.Impulse);
+        // checks if input is doing something
+        if (MoveRead.magnitude > 0)
+        {
+            transform.position += (Vector3)(Time.deltaTime * MoveSpeed * MoveRead);
+        }
+        else
+        {
+            PlayerBody.linearVelocity = Vector2.zero;
+        }
     }
 }
