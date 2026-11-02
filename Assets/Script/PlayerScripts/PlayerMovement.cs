@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,13 +30,18 @@ public class PlayerMovement : MonoBehaviour
     {
         // Read input -Lud
         Vector2 MoveRead = MovementInput.ReadValue<Vector2>();
-        // checks if input is doing something
+
+        // checks if input is doing something -Lud
         if (MoveRead.magnitude > 0)
         {
-            transform.position += (Vector3)(Time.deltaTime * MoveSpeed * MoveRead);
+            // Normalize so that you dont go faster or slower -Lud
+            MoveRead.Normalize();
+            // Moves with MoveSpeed, might want it to get faster over time -Lud
+            PlayerBody.linearVelocity = MoveRead * MoveSpeed;
         }
         else
         {
+            // Set speed to zero if the player doesnt move
             PlayerBody.linearVelocity = Vector2.zero;
         }
     }
