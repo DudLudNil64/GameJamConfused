@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class WeaponSword : WeaponBase
 {
-    public int Damage = 10;
     public LayerMask mask;
     public override void UseWeapon()
     {
@@ -11,7 +10,7 @@ public class WeaponSword : WeaponBase
         Collider2D[] colliders = Physics2D.OverlapCircleAll(FirePosition, 1, mask);
         foreach (Collider2D collider in colliders)
         {
-            collider.GetComponent<EnemyHealthManager>().TakeDamage(Damage); ;
+            collider.GetComponent<EnemyHealthManager>().TakeDamage(Damage);
         }
 
     }

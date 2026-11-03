@@ -27,8 +27,10 @@ public class WeaponBase : MonoBehaviour
 
     public virtual void UseWeapon()
     {
+
         StartCoroutine("StartUseDelay");
 
+        // this functions shoot operation
         GameObject CurrentBullet = Instantiate(Bullet);
         CurrentBullet.transform.position = FirePosition;
     }
