@@ -828,8 +828,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6791876598265206378, guid: bd5403402824e1b4ab4f92bcd1085e43, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5009108800686811646}
   m_SourcePrefab: {fileID: 100100000, guid: bd5403402824e1b4ab4f92bcd1085e43, type: 3}
+--- !u!1 &5009108800686811644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6791876598265206378, guid: bd5403402824e1b4ab4f92bcd1085e43, type: 3}
+  m_PrefabInstance: {fileID: 5009108800686811643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &5009108800686811645 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6059294753666484172, guid: bd5403402824e1b4ab4f92bcd1085e43, type: 3}
+  m_PrefabInstance: {fileID: 5009108800686811643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5009108800686811646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5009108800686811644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b3fdf45e4ba254892c44c1503c312c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieJester
+  dir: {x: 0, y: 0, z: 0}
+  speed: 4
+  player: {fileID: 542502497}
+  enemyheal: 2
+  EnemyBody: {fileID: 5009108800686811645}
+  attackRange: 3
+  shootpoint: 0
+  cooldown: 1.5
+  Enemybullet: {fileID: 0}
+  bulletForce: 10
+  distanceFromEnemy: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  avoidRadius: 2
 --- !u!1001 &5473353433727102202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -886,11 +926,20 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 542502497}
+    - target: {fileID: 8702155040024028699, guid: 8c77acafbe44f83479922382ebae2a2f, type: 3}
+      propertyPath: EnemyBody
+      value: 
+      objectReference: {fileID: 5473353433727102203}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c77acafbe44f83479922382ebae2a2f, type: 3}
+--- !u!50 &5473353433727102203 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8996655039322427974, guid: 8c77acafbe44f83479922382ebae2a2f, type: 3}
+  m_PrefabInstance: {fileID: 5473353433727102202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

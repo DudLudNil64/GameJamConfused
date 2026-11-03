@@ -6,7 +6,6 @@ public class ZombieJester : ZombieKnigth
     public float shootpoint;
     public float cooldown = 1.5f;
     float timer = 0;
-    public GameObject Enemybullet;
     public float bulletForce = 10f;
     [SerializeField] float distanceFromEnemy = 1;
     [SerializeField] LayerMask mask;
