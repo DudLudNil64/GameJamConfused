@@ -8,7 +8,7 @@ public class ZombieKnigth : MonoBehaviour
     public Transform player;
     protected EnemyHealthManager healthManager;
     public float enemyheal = 2;
-    Rigidbody2D EnemyBody;
+     public Rigidbody2D EnemyBody;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
