@@ -104,7 +104,7 @@ public class RoomTrigger : MonoBehaviour
     {
         GameObject MazeManager = GameObject.FindGameObjectWithTag("Manager");
         MazeGen Maze = MazeManager.GetComponent<MazeGen>();
-        for (int i = 0; i < Amount; i++)
+      /*  for (int i = 0; i < Amount; i++)
         {
             float Distance = UnityEngine.Random.Range(0.0f, Maze.RoomSize / 4);
             Vector2 Direction = new Vector2(UnityEngine.Random.Range(-1, 1), UnityEngine.Random.Range(-1, 1));
@@ -129,6 +129,6 @@ public class RoomTrigger : MonoBehaviour
             {
                 NewItemPick.Item = global::ItemPickUp.Items.MaxHealth;
             }
-        }
+        }*/
     }
 }
