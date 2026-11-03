@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -25,7 +26,7 @@ public class WeaponBase : MonoBehaviour
 
     public virtual void UseWeapon()
     {
-        Uses--;
+        StartCoroutine("StartUseDelay");
 
         GameObject CurrentBullet = Instantiate(Bullet);
         CurrentBullet.transform.position = FirePosition;
@@ -33,6 +34,34 @@ public class WeaponBase : MonoBehaviour
 
     public virtual void Reload()
     {
+        StartCoroutine("StartLoadDelay");
+    }
+
+    public virtual bool CheckForUseability()
+    {
+        bool Check = true;
+
+        if(InLoadDelay || InUseDelay) Check = false;
+
+        if(Uses <= 0) Check = false;
+
+        return Check;
+    }
+
+    public virtual IEnumerator StartUseDelay()
+    {
+        Uses--;
+
+        InUseDelay = true;
+        yield return new WaitForSeconds(UseDelay);
+        InUseDelay = false;
+    }
+    public virtual IEnumerator StartLoadDelay()
+    {
         Uses = MaxUses;
+
+        InLoadDelay = true;
+        yield return new WaitForSeconds(LoadDelay);
+        InLoadDelay = false;
     }
 }
