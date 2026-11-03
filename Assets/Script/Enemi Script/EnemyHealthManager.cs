@@ -16,9 +16,9 @@ public class EnemyHealthManager : MonoBehaviour
     {
 
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(int Damage)
     {
-        currentHealth -= damage;
+        currentHealth -= Damage;
         if (currentHealth <= 0)
         {
             Die();
