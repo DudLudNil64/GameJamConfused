@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Needed inputs for movement -Lud
     InputAction MovementInput;
+    InputAction MousePosition;
 
     private void Start()
     {
@@ -23,10 +24,17 @@ public class PlayerMovement : MonoBehaviour
         // Checks for inputs -Lud
         if (InputSystem.actions.FindAction("Main/Movement") != null) MovementInput = InputSystem.actions.FindAction("Main/Movement");
         else Debug.Log("Movement Input Not Found");
-
+        // 
+        if (InputSystem.actions.FindAction("Main/MousePosition") != null) MousePosition = InputSystem.actions.FindAction("Main/MousePosition");
+        else Debug.Log("MousePosition Input Not Found");
     }
 
     private void FixedUpdate()
+    {
+        HandleMove();
+    }
+
+    void HandleMove()
     {
         // Read input -Lud
         Vector2 MoveRead = MovementInput.ReadValue<Vector2>();
@@ -44,5 +52,16 @@ public class PlayerMovement : MonoBehaviour
             // Set speed to zero if the player doesnt move
             PlayerBody.linearVelocity = Vector2.zero;
         }
+    }
+
+    void HandleRotate()
+    {
+        // Gets Mouse Position And Makes It To Player Space - Lud
+        Vector3 MouseToWorldPosition = Camera.main.ScreenToWorldPoint(MousePosition.ReadValue<Vector2>());
+        MouseToWorldPosition.z = 0;
+        Vector2 OffsetVector = transform.position - MouseToWorldPosition;
+        // Uses The OffsetVector To Rotate The Player Towards The Mouse
+        float Angle = Mathf.Atan2(OffsetVector.y, OffsetVector.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, Angle + 90);
     }
 }

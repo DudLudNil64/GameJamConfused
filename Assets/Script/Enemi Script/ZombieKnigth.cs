@@ -8,12 +8,12 @@ public class ZombieKnigth : MonoBehaviour
     public Transform player;
     protected EnemyHealthManager healthManager;
     public float enemyheal = 2;
-    Rigidbody2D EnemyBody;
+     public Rigidbody2D EnemyBody;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
-        player = FindAnyObjectByType<PlayerMovement>().transform;
-        healthManager = GetComponent<EnemyHealthManager>();
+        player = FindAnyObjectByType<PlayerMovement>().transform;// find player
+        healthManager = GetComponent<EnemyHealthManager>();// find enemy healt
         if (gameObject.GetComponent<Rigidbody2D>() != null) EnemyBody = gameObject.GetComponent<Rigidbody2D>();
         else Debug.Log("Enemy Doesnt Have A Rigidbody2D");
     }
@@ -21,6 +21,7 @@ public class ZombieKnigth : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
+        // go to the player
         dir = (player.position - transform.position).normalized; //-1 - 1
         EnemyBody.linearVelocity = dir * speed;
     }

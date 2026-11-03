@@ -8,17 +8,31 @@ public class WeaponBase : MonoBehaviour
     public Vector2 BulletDirection;
     public GameObject Bullet;
 
-    // Main stats
+    // Main stats -Lud
     public int Damage;
     public int AttackCount;
 
-    // Delay Veriables
-    public float Delay;
-    public bool InDelay;
+    // For ammo usage can be ignored for swords
+    public int Uses;
+    public int MaxUses;
+
+    // Delay Veriables for delay -Lud
+    public float UseDelay;
+    public bool InUseDelay;
+    // Reload -Lud
+    public float LoadDelay;
+    public bool InLoadDelay;
 
     public virtual void UseWeapon()
     {
+        Uses--;
+
         GameObject CurrentBullet = Instantiate(Bullet);
         CurrentBullet.transform.position = FirePosition;
+    }
+
+    public virtual void Reload()
+    {
+        Uses = MaxUses;
     }
 }
