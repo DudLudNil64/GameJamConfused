@@ -25,17 +25,22 @@ public class ZombieJester : ZombieKnigth
 
         dir = (player.position - transform.position).normalized; //-1 - 1
 
-        if (Vector2.Distance(player.position, transform.position) > attackRange)// go to player
+        // follow the player 
+        if (Vector2.Distance(player.position, transform.position) > attackRange)
         {
             EnemyBody.linearVelocity = dir * speed;
 
         }
-        else if (Vector2.Distance(player.position, transform.position) < attackRange - 1)// get away
+
+        //if player to close get away from him
+        else if (Vector2.Distance(player.position, transform.position) < attackRange - 1)
         {
 
             EnemyBody.linearVelocity = -dir * speed; 
         }
-        if (timer >= cooldown && Vector2.Distance(player.position, transform.position) < attackRange)//active the shoot
+
+        // when and where to shoot
+        if (timer >= cooldown && Vector2.Distance(player.position, transform.position) < attackRange)
         {
             print("shoot");
        

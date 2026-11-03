@@ -21,7 +21,7 @@ public class ZombieKnigth : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        // go to the player
+        // follow the player
         dir = (player.position - transform.position).normalized; //-1 - 1
         EnemyBody.linearVelocity = dir * speed;
     }

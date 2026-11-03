@@ -16,6 +16,9 @@ public class EnemyHealthManager : MonoBehaviour
     {
 
     }
+
+
+    //code to take damage
     public void TakeDamage(int Damage)
     {
         currentHealth -= Damage;
@@ -24,6 +27,9 @@ public class EnemyHealthManager : MonoBehaviour
             Die();
         }
     }
+
+
+    //coode to die, yea die.
     void Die()
     {
         Destroy(gameObject);
