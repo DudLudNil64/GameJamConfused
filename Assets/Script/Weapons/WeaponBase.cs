@@ -27,7 +27,6 @@ public class WeaponBase : MonoBehaviour
 
     public virtual void UseWeapon()
     {
-
         StartCoroutine("StartUseDelay");
 
         // this functions shoot operation
