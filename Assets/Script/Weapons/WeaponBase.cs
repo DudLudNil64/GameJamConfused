@@ -8,6 +8,7 @@ public class WeaponBase : MonoBehaviour
     public Vector2 FirePosition;
     public Vector2 BulletDirection;
     public GameObject Bullet;
+    
 
     // Main stats -Lud
     public int Damage;
