@@ -844,7 +844,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3741575626162468670, guid: 60db58a2ffbfe774e82d1f2f3210b89b, type: 3}
       propertyPath: m_Name
-      value: RoomTrigger
+      value: RoomTrigger (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3883785408664518803, guid: 60db58a2ffbfe774e82d1f2f3210b89b, type: 3}
       propertyPath: m_LocalPosition.x
