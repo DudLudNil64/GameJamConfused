@@ -15,10 +15,10 @@ public class ZombieJester : ZombieKnigth
     // Update is called once per frame
     protected override void Update()
     {
-        Collider2D playerBullet = Physics2D.OverlapCircle(transform.position, avoidRadius, mask);
+        Collider2D playerBullet = Physics2D.OverlapCircle(transform.position, avoidRadius, mask);// detect sertarin things who enter in the mask
         if (playerBullet != null)
         {
-            //spring iväg
+            //gettt away from bullets
 
             EnemyBody.linearVelocity /= (playerBullet.transform.position - transform.position).normalized * speed * 3 * Time.deltaTime;
         }
