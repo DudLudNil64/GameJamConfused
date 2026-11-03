@@ -7,8 +7,7 @@ public class ZombieJester : ZombieKnigth
     public float cooldown = 1.5f;
     float timer = 0;
     public float bulletForce = 10f;
-    [SerializeField] float distanceFromEnemy = 1;
-    [SerializeField] LayerMask mask;
+    [SerializeField] LayerMask mask;    
     [SerializeField, Range(1, 100)] float avoidRadius = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    

@@ -860,12 +860,10 @@ MonoBehaviour:
   player: {fileID: 542502497}
   enemyheal: 2
   EnemyBody: {fileID: 5009108800686811645}
-  attackRange: 3
+  attackRange: 2.5
   shootpoint: 0
   cooldown: 1.5
-  Enemybullet: {fileID: 0}
   bulletForce: 10
-  distanceFromEnemy: 1
   mask:
     serializedVersion: 2
     m_Bits: 0
@@ -881,6 +879,10 @@ PrefabInstance:
     - target: {fileID: 612873096141568430, guid: 8c77acafbe44f83479922382ebae2a2f, type: 3}
       propertyPath: m_Name
       value: Zombie knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 612873096141568430, guid: 8c77acafbe44f83479922382ebae2a2f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1329227027067597432, guid: 8c77acafbe44f83479922382ebae2a2f, type: 3}
       propertyPath: m_LocalPosition.x
