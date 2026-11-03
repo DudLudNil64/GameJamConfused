@@ -4,6 +4,7 @@ public class CameraScript : MonoBehaviour
 {
     bool moveCamera = false;
     [SerializeField] float speed;
+    [SerializeField] float cameraSize;
 
     void LateUpdate()
     {
@@ -25,6 +26,7 @@ public class CameraScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             moveCamera = true;
+            Camera.main.orthographicSize = cameraSize;
             Debug.Log("Move camera to room" + gameObject.name);
         }
     }
