@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 360024720626014176}
   - component: {fileID: 7842554867352671840}
   - component: {fileID: 6059294753666484172}
+  - component: {fileID: 6144860050045729503}
+  - component: {fileID: 6315444259406373823}
   m_Layer: 0
   m_Name: Zombie Jester
   m_TagString: Untagged
@@ -174,3 +176,53 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6144860050045729503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791876598265206378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b3fdf45e4ba254892c44c1503c312c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieJester
+  dir: {x: 0, y: 0, z: 0}
+  speed: 4
+  player: {fileID: 0}
+  enemyheal: 2
+  EnemyBody: {fileID: 0}
+  attackRange: 3
+  shootpoint: 0
+  cooldown: 1.5
+  bulletForce: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  avoidRadius: 1
+--- !u!114 &6315444259406373823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791876598265206378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b3fdf45e4ba254892c44c1503c312c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieJester
+  dir: {x: 0, y: 0, z: 0}
+  speed: 4
+  player: {fileID: 0}
+  enemyheal: 2
+  EnemyBody: {fileID: 6059294753666484172}
+  attackRange: 3
+  shootpoint: 0
+  cooldown: 1.5
+  bulletForce: 10
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  avoidRadius: 2
