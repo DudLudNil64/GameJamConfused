@@ -31,7 +31,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Moves with input
         HandleMove();
+        // Rotates towards mouse
         HandleRotate();
     }
 
