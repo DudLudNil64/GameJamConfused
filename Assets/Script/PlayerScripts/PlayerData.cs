@@ -1,7 +1,9 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    [SerializeField] private WeaponSword sword;
     public int maxhealth = 100;
     public int health = 90;
     public bool hasKey = false;
@@ -17,5 +19,17 @@ public class PlayerData : MonoBehaviour
     public void GiveKey()
     {
         hasKey = true;
+    }
+
+    public void DamageBoost(int amount, float duration)
+    {
+        StartCoroutine(Apply(amount, duration));
+
+        IEnumerator Apply(int amount, float duration)
+        {
+            sword.Damage += amount;
+            yield return new WaitForSeconds(duration);
+            sword.Damage -= amount;
+        }
     }
 }
