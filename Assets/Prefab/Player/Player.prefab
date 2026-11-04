@@ -188,8 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5936e94502f03842a3e3e3256540d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
-  maxhealth: 100
-  health: 90
+  maxhealth: 250
+  health: 250
   hasKey: 0
 --- !u!114 &4063730811899349360
 MonoBehaviour:

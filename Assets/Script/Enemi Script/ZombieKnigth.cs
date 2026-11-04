@@ -35,7 +35,7 @@ public class ZombieKnigth : MonoBehaviour
         float Angle = Mathf.Atan2(OffsetVector.y, OffsetVector.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, Angle + 90);
 
-        if (Sword.CheckForUseability() && (player.position - transform.position).magnitude < 2)
+        if (Sword.CheckForUseability() && (player.position - transform.position).magnitude < 1)
         {
             Sword.UseWeapon();
         }

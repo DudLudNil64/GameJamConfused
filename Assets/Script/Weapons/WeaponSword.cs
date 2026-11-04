@@ -29,7 +29,7 @@ public class WeaponSword : WeaponBase
                 // Gets the players health data and deals damage
                 PlayerData Health = collider.GetComponent<PlayerData>();
 
-                Health.health -= Damage;
+                Health.RemoveHealth(Damage);
 
                 continue;
             }

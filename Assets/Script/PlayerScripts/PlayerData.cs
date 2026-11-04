@@ -16,6 +16,16 @@ public class PlayerData : MonoBehaviour
         }
     }
 
+    public void RemoveHealth(int amount)
+    {
+        health -= amount;
+
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void GiveKey()
     {
         hasKey = true;
