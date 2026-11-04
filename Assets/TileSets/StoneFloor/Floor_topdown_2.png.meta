@@ -113,15 +113,15 @@ TextureImporter:
         serializedVersion: 2
         x: 78
         y: 141
-        width: 64
-        height: 64
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 68d2ef9644eed4e70800000000000000
       internalID: 9101192399589092742
@@ -134,16 +134,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 78
-        y: 73
-        width: 64
-        height: 64
+        y: 104
+        width: 33
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: df650673354802f80800000000000000
       internalID: -8133355434084903171
@@ -156,19 +156,217 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 78
-        y: 5
-        width: 64
-        height: 64
+        y: 37
+        width: 31
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 53d3ad9d0e80569d0800000000000000
       internalID: -2781807433010758347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_topdown_2_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 5
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd6273112669fd429b4df155a06c9f6
+      internalID: -552058820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_topdown_2_4
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 5
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f739f667cc15e7499aa6db8e69ae9fd
+      internalID: 808173858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_topdown_2_5
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 37
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fbc294751b63244a3e32f5d761fc1d
+      internalID: -2054979688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_topdown_2_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 104
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083a2fb265172164e93a17c6ac644093
+      internalID: 2082193802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_topdown_2_7
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 73
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a63afbc175f5bc4e93e4af4e7d3c378
+      internalID: -1307056541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_topdown_2_8
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 73
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431c417d545252640a1524c1ecdc9f10
+      internalID: -2128325209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_topdown_2_9
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 172
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1fc7bc27b6c534da6762e0dd2b9b7f
+      internalID: -835448634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_topdown_2_10
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 172
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b6cbc87da889745a317a2cd7673908
+      internalID: -1981987947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_topdown_2_11
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 141
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bba9f8847e9bcc429045f1832eac9da
+      internalID: 1183783822
       vertices: []
       indices: 
       edges: []
@@ -193,7 +391,16 @@ TextureImporter:
     nameFileIdTable:
       Floor_topdown_2_0: 9101192399589092742
       Floor_topdown_2_1: -8133355434084903171
+      Floor_topdown_2_10: -1981987947
+      Floor_topdown_2_11: 1183783822
       Floor_topdown_2_2: -2781807433010758347
+      Floor_topdown_2_3: -552058820
+      Floor_topdown_2_4: 808173858
+      Floor_topdown_2_5: -2054979688
+      Floor_topdown_2_6: 2082193802
+      Floor_topdown_2_7: -1307056541
+      Floor_topdown_2_8: -2128325209
+      Floor_topdown_2_9: -835448634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
