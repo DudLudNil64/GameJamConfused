@@ -24,10 +24,12 @@ public class PlayerUseWeapon : MonoBehaviour
     }
     void Update()
     {
+        Sword.FirePosition = transform.position + transform.up;
+
         // Sword stuff
         if (RightClick.ReadValue<float>() > 0.5f && Sword.CheckForUseability()) Sword.UseWeapon();
         // Gun stuff
-        if (LeftClick.ReadValue<float>() > 0 && Pistol.CheckForUseability()) Pistol.UseWeapon();
+        if (LeftClick.ReadValue<float>() > 0.5f && Pistol.CheckForUseability()) Pistol.UseWeapon();
 
     }
 }
