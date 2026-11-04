@@ -13,6 +13,9 @@ public class PlayerUseWeapon : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (InputSystem.actions.FindAction("Main/RightMouseButton") != null) LeftClick = InputSystem.actions.FindAction("Main/RightMouseButton");
+        else Debug.Log("RightMouseButton Input Not Found");
+
         if (InputSystem.actions.FindAction("Main/LeftMouseButton") != null) LeftClick = InputSystem.actions.FindAction("Main/LeftMouseButton");
         else Debug.Log("LeftMouseButton Input Not Found");
     }
@@ -22,11 +25,17 @@ public class PlayerUseWeapon : MonoBehaviour
     {
       
 
-        if (LeftClick.ReadValue<float>() > 0)        
+        if (RigthClick.ReadValue<float>() > 0)        
         { 
           
             if(weaponSword.CheckForUseability())
             weaponSword.UseWeapon();
+        }
+
+        if(LeftClick.ReadValue<float>() > 0)
+        {
+            if (pistol.CheckForUseability())
+                pistol.UseWeapon();
         }
     }
 }
