@@ -13,6 +13,7 @@ public class WeaponSword : WeaponBase
         {
             // Return if of same faction
             if(collider.CompareTag(tag)) continue;
+
             // Check for what todo since our code is so divided._.
             if(collider.CompareTag("RandomObject"))
             {
