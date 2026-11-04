@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5930693123748852190}
   - component: {fileID: -3372019983277127857}
   - component: {fileID: 8702155040024028699}
+  - component: {fileID: 6493936788941527486}
   m_Layer: 0
   m_Name: Zombie knight
   m_TagString: Enemy
@@ -205,3 +206,31 @@ MonoBehaviour:
   player: {fileID: 0}
   enemyheal: 2
   EnemyBody: {fileID: 0}
+  Sword: {fileID: 6493936788941527486}
+--- !u!114 &6493936788941527486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612873096141568430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3d86090bf44f142b9dd2b208f7d36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponSword
+  FirePosition: {x: 0, y: 0}
+  BulletDirection: {x: 0, y: 0}
+  Bullet: {fileID: 0}
+  Damage: 20
+  AttackCount: 1
+  Uses: 1
+  MaxUses: 1
+  UseDelay: 1
+  InUseDelay: 0
+  LoadDelay: 0
+  InLoadDelay: 0
+  AreaAttack: 0.4
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295

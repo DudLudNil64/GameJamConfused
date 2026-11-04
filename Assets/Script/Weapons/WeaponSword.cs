@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class WeaponSword : WeaponBase
 {
+    public float AreaAttack;
     public LayerMask mask;
     public override void UseWeapon()
     {
         // get the enemy heal code and trigger "damage"
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(FirePosition, 1, mask);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(FirePosition, AreaAttack, mask);
 
         StartCoroutine("StartUseDelay");
 
@@ -62,6 +63,6 @@ public class WeaponSword : WeaponBase
     // draw a shere to can see the attac while not sprite
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawSphere(FirePosition, 1);
+        Gizmos.DrawWireSphere(FirePosition, AreaAttack);
     }
 }

@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d918db57ac629409a4846aa2607536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  MoveSpeed: 0
+  MoveSpeed: 7
 --- !u!114 &3829797377226320808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,14 +256,15 @@ MonoBehaviour:
   FirePosition: {x: 0, y: 0}
   BulletDirection: {x: 0, y: 0}
   Bullet: {fileID: 0}
-  Damage: 10
+  Damage: 30
   AttackCount: 1
   Uses: 1
   MaxUses: 1
-  UseDelay: 0.15
+  UseDelay: 0.75
   InUseDelay: 0
   LoadDelay: 0
   InLoadDelay: 0
+  AreaAttack: 0.75
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
