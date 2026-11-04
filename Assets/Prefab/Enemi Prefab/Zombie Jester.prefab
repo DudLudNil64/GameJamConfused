@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7842554867352671840}
   - component: {fileID: 6059294753666484172}
   - component: {fileID: 6144860050045729503}
-  - component: {fileID: 6315444259406373823}
+  - component: {fileID: 7766888233509080689}
   m_Layer: 0
   m_Name: Zombie Jester
   m_TagString: Untagged
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.20188677, g: 1, b: 0.328831, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   avoidRadius: 1
---- !u!114 &6315444259406373823
+--- !u!114 &7766888233509080689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,19 +210,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6791876598265206378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14b3fdf45e4ba254892c44c1503c312c, type: 3}
+  m_Script: {fileID: 11500000, guid: 575394d14c5e842479792a7da660e592, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ZombieJester
-  dir: {x: 0, y: 0, z: 0}
-  speed: 4
-  player: {fileID: 0}
-  enemyheal: 2
-  EnemyBody: {fileID: 6059294753666484172}
-  attackRange: 3
-  shootpoint: 0
-  cooldown: 1.5
-  bulletForce: 10
-  mask:
-    serializedVersion: 2
-    m_Bits: 0
-  avoidRadius: 2
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthManager
+  maxHealth: 125
+  currentHealth: 125
