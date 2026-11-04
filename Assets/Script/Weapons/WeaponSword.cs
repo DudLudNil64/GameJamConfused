@@ -11,7 +11,32 @@ public class WeaponSword : WeaponBase
 
         foreach (Collider2D collider in colliders)
         {
-            collider.GetComponent<EnemyHealthManager>().TakeDamage(Damage);
+            // Return if of same faction
+            if(collider.CompareTag(tag)) continue;
+            // Check for what todo since our code is so divided._.
+            if(collider.CompareTag("RandomObject"))
+            {
+                // does nothing for now
+
+                continue;
+            }
+            if (collider.CompareTag("Player"))
+            {
+                // Gets the players health data and deals damage
+                PlayerData Health = collider.GetComponent<PlayerData>();
+
+                Health.health -= Damage;
+
+                continue;
+            }
+            if (collider.CompareTag("Enemy"))
+            {
+                EnemyHealthManager Health = collider.GetComponent<EnemyHealthManager>();
+
+                Health.TakeDamage(Damage);
+
+                continue;
+            }
         }
     }
 

@@ -14,6 +14,7 @@ public class ZombieKnigth : MonoBehaviour
     {
         player = FindAnyObjectByType<PlayerMovement>().transform;// find player
         healthManager = GetComponent<EnemyHealthManager>();// find enemy healt
+
         if (gameObject.GetComponent<Rigidbody2D>() != null) EnemyBody = gameObject.GetComponent<Rigidbody2D>();
         else Debug.Log("Enemy Doesnt Have A Rigidbody2D");
     }
@@ -25,6 +26,4 @@ public class ZombieKnigth : MonoBehaviour
         dir = (player.position - transform.position).normalized; //-1 - 1
         EnemyBody.linearVelocity = dir * speed;
     }
-
-   
 }
