@@ -558,7 +558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290233090309859248, guid: d904d54c3a6b60a419bf7b626125d6e1, type: 3}
       propertyPath: Damage
-      value: 1
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290233090309859248, guid: d904d54c3a6b60a419bf7b626125d6e1, type: 3}
+      propertyPath: UseDelay
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8290233090309859248, guid: d904d54c3a6b60a419bf7b626125d6e1, type: 3}
       propertyPath: mask.m_Bits

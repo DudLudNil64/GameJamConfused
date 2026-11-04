@@ -7,7 +7,7 @@ public class WeaponSword : WeaponBase
     public override void UseWeapon()
     {
         // get the enemy heal code and trigger "damage"
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(FirePosition, 3, mask);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(FirePosition, 1, mask);
 
         StartCoroutine("StartUseDelay");
 
