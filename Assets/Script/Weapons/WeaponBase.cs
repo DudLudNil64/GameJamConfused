@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class WeaponBase : MonoBehaviour
 {
@@ -21,6 +20,7 @@ public class WeaponBase : MonoBehaviour
     // Delay Veriables for delay -Lud
     public float UseDelay;
     public bool InUseDelay;
+
     // Reload -Lud
     public float LoadDelay;
     public bool InLoadDelay;

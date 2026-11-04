@@ -5,13 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerUseWeapon : MonoBehaviour
 {
-   public WeaponBase pistol;
-   public WeaponSword weaponSword;
    public WeaponBase Pistol;
-   public WeaponSword Sword;
+   public WeaponBase Sword;
 
     InputAction LeftClick;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     InputAction RightClick;
     void Start()
     {
@@ -27,13 +24,10 @@ public class PlayerUseWeapon : MonoBehaviour
     }
     void Update()
     {
+        // Sword stuff
         if (RightClick.ReadValue<float>() > 0.5f && Sword.CheckForUseability()) Sword.UseWeapon();
+        // Gun stuff
+        if (LeftClick.ReadValue<float>() > 0 && Pistol.CheckForUseability()) Pistol.UseWeapon();
 
-        if (LeftClick.ReadValue<float>() > 0)
-        {
-            if (Pistol.CheckForUseability())
-                Pistol.UseWeapon();
-        }
-        
     }
 }
