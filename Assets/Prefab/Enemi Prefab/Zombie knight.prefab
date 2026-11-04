@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4959564488015600802}
   - component: {fileID: 8996655039322427974}
   - component: {fileID: 5930693123748852190}
+  - component: {fileID: -3372019983277127857}
   - component: {fileID: 8702155040024028699}
   m_Layer: 0
   m_Name: Zombie knight
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.27735847, g: 0.763289, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -173,6 +174,20 @@ PolygonCollider2D:
       - {x: 0, y: -0.25}
       - {x: 0.5, y: 0}
   m_UseDelaunayMesh: 1
+--- !u!114 &-3372019983277127857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612873096141568430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575394d14c5e842479792a7da660e592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthManager
+  maxHealth: 200
+  currentHealth: 200
 --- !u!114 &8702155040024028699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,3 +204,4 @@ MonoBehaviour:
   speed: 4
   player: {fileID: 0}
   enemyheal: 2
+  EnemyBody: {fileID: 0}
