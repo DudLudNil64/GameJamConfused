@@ -113,8 +113,8 @@ TextureImporter:
         serializedVersion: 2
         x: 78
         y: 141
-        width: 31
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,9 +134,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 78
-        y: 104
-        width: 33
-        height: 33
+        y: 103
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,9 +156,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 78
-        y: 37
-        width: 31
-        height: 32
+        y: 36
+        width: 32
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,7 +179,7 @@ TextureImporter:
         serializedVersion: 2
         x: 78
         y: 5
-        width: 31
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -222,9 +222,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 109
-        y: 37
+        y: 36
         width: 33
-        height: 32
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,10 +243,10 @@ TextureImporter:
       name: Floor_topdown_2_6
       rect:
         serializedVersion: 2
-        x: 111
-        y: 104
-        width: 31
-        height: 33
+        x: 110
+        y: 103
+        width: 32
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: Floor_topdown_2_7
       rect:
         serializedVersion: 2
-        x: 111
+        x: 110
         y: 73
-        width: 31
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +289,8 @@ TextureImporter:
         serializedVersion: 2
         x: 78
         y: 73
-        width: 33
-        height: 31
+        width: 34
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,9 +310,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 78
-        y: 172
-        width: 31
-        height: 33
+        y: 171
+        width: 32
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,10 +331,10 @@ TextureImporter:
       name: Floor_topdown_2_10
       rect:
         serializedVersion: 2
-        x: 109
-        y: 172
-        width: 33
-        height: 33
+        x: 108
+        y: 171
+        width: 35
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -353,10 +353,10 @@ TextureImporter:
       name: Floor_topdown_2_11
       rect:
         serializedVersion: 2
-        x: 109
+        x: 108
         y: 141
-        width: 33
-        height: 31
+        width: 34
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,6 +367,28 @@ TextureImporter:
       bones: []
       spriteID: 7bba9f8847e9bcc429045f1832eac9da
       internalID: 1183783822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_topdown_2_12
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 136
+        width: 2
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c20e5d8cbe0bb48b47d8cac89b0cad
+      internalID: 443147145
       vertices: []
       indices: 
       edges: []
@@ -393,6 +415,7 @@ TextureImporter:
       Floor_topdown_2_1: -8133355434084903171
       Floor_topdown_2_10: -1981987947
       Floor_topdown_2_11: 1183783822
+      Floor_topdown_2_12: 443147145
       Floor_topdown_2_2: -2781807433010758347
       Floor_topdown_2_3: -552058820
       Floor_topdown_2_4: 808173858
