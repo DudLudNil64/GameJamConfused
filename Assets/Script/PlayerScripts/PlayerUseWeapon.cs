@@ -1,15 +1,14 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class PlayerUseWeapon : MonoBehaviour
 {
-   public WeaponBase Pistol;
+   public WeaponBase Shotgun;
    public WeaponBase Sword;
 
     InputAction LeftClick;
     InputAction RightClick;
+    InputAction Reload;
     void Start()
     {
         if (InputSystem.actions.FindAction("Main/RightMouseButton") != null) LeftClick = InputSystem.actions.FindAction("Main/RightMouseButton");
@@ -21,16 +20,20 @@ public class PlayerUseWeapon : MonoBehaviour
         //
         if (InputSystem.actions.FindAction("Main/RightMouseButton") != null) RightClick = InputSystem.actions.FindAction("Main/RightMouseButton");
         else Debug.Log("RightMouseButton Input Not Found");
+        //
+        if(InputSystem.actions.FindAction("Main/ReloadKey") != null) Reload = InputSystem.actions.FindAction("Main/ReloadKey");
+        else Debug.Log("ReloadKey Wasn't Found");
     }
     void Update()
     {
         Sword.FirePosition = transform.position + transform.up;
-        
+        Shotgun.FirePosition = transform.position + transform.up;
 
         // Sword stuff
         if (RightClick.IsPressed() && Sword.CheckForUseability()) Sword.UseWeapon();
         // Gun stuff
-        if (LeftClick.IsPressed() && Pistol.CheckForUseability()) Pistol.UseWeapon();
-
+        if (LeftClick.IsPressed() && Shotgun.CheckForUseability()) Shotgun.UseWeapon();
+        // Reloads
+        if (Reload.IsPressed()) Shotgun.Reload();
     }
 }

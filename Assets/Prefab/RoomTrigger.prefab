@@ -92,3 +92,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraScript
   speed: 0.05
+  cameraSize: 0
+  zombiePrefabs:
+  - {fileID: 6791876598265206378, guid: bd5403402824e1b4ab4f92bcd1085e43, type: 3}
+  - {fileID: 3719205038884750441, guid: 4983aa2dcdfb262409532f9db15ba09a, type: 3}
+  - {fileID: 612873096141568430, guid: 8c77acafbe44f83479922382ebae2a2f, type: 3}
+  - {fileID: 4218961514898901841, guid: 4128b09a7ca84214cb136dd9fc735beb, type: 3}
