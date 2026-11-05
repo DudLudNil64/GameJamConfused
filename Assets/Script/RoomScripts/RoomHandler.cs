@@ -1,20 +1,59 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.WSA;
 
 public class RoomHandler : MonoBehaviour
 {
-    public float TimeToMoveCamera;
-    public float SetSizeOnMove;
+    [SerializeField] float speed;
+    [SerializeField] float cameraSize;
+    [SerializeField] GameObject[] zombiePrefabs;
+    bool moveCamera = false;
+    private bool firstEnter = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void LateUpdate()
     {
-        if(collision.CompareTag("Player"))
+       if (moveCamera)
         {
-            Vector3 Position = transform.position;
-            Position.z = -10;
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, transform.position + new Vector3(0, 0, -10), speed);
 
-            Vector3.Lerp(Camera.main.transform.position, Position, TimeToMoveCamera);
+            if (Vector3.Distance(Camera.main.transform.position, transform.position + new Vector3(0, 0 , -10)) < 0.01f)
+            {
+                Camera.main.transform.position = transform.position + new Vector3(0, 0, -10);
+                moveCamera = false;
+            }
+        }
+    }
 
-            Camera.main.orthographicSize = SetSizeOnMove;
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Entered");
+        if (other.gameObject.CompareTag("Player"))
+        {
+            moveCamera = true;
+            Camera.main.orthographicSize = cameraSize;
+            Debug.Log("Move camera to room" + gameObject.name);
+
+            if (!firstEnter)
+            {
+                firstEnter = true;
+                Debug.Log("First enter");
+
+                StartCoroutine(SpawnZombies(0.7f));
+            }
+        }
+    }
+
+    IEnumerator SpawnZombies(float duration)
+    {
+        int amount = Random.Range(10, 15);
+        for (int i = 0; i < amount; i++)
+        {
+            int randomIndex = Random.Range(1, zombiePrefabs.Length);
+            GameObject selectedZombie = zombiePrefabs[randomIndex];
+            Vector3 randomPos = transform.position + new Vector3(Random.Range(-transform.localScale.x / 2, transform.localScale.x / 2), Random.Range(-transform.localScale.y / 2, transform.localScale.y / 2), 0f);
+
+            GameObject zombieobj = Instantiate(selectedZombie, randomPos, Quaternion.identity);
+            yield return new WaitForSeconds(duration);
         }
     }
 }

@@ -35,7 +35,7 @@ public class ZombieJester : ZombieKnigth
         // when and where to shoot
         if (Vector2.Distance(player.position, transform.position) < attackRange)
         {
-            print("shoot");
+            //print("shoot");
         }
     }
     private void OnDrawGizmosSelected()
