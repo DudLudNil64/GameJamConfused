@@ -23,7 +23,7 @@ public class ZombieKnigth : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         // follow the player
         dir = (player.position - transform.position).normalized; //-1 - 1
