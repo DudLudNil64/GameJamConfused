@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3646027122389090699}
   m_Layer: 0
   m_Name: Slug
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f759145fe2736e34c92ad243f3c7ed05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletMoveForward
-  damage: 65
+  damage: 50
 --- !u!212 &6419293285534342013
 SpriteRenderer:
   serializedVersion: 3
@@ -95,7 +95,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0.6507651, b: 0, a: 1}

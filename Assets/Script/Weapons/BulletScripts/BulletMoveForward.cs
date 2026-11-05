@@ -10,6 +10,9 @@ public class BulletMoveForward : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+
+        Debug.Log("BulletTag : " + tag + " CollisionTag : " + collision.transform.tag);
+
         // Return if of same faction
         if(collision.transform.CompareTag(tag)) return;
 
@@ -20,14 +23,14 @@ public class BulletMoveForward : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        if (collision.transform.CompareTag("Player"))
+        else if (collision.transform.CompareTag("Player"))
         {
             // Gets the players health data and deals damage
             PlayerData Health = collision.transform.GetComponent<PlayerData>();
             Destroy(gameObject);
             Health.RemoveHealth(damage);
         }
-        if (collision.transform.CompareTag("Enemy"))
+        else if (collision.transform.CompareTag("Enemy"))
         {
             EnemyHealthManager Health = collision.transform.GetComponent<EnemyHealthManager>();
 
