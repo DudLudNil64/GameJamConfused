@@ -2489,6 +2489,14 @@ PrefabInstance:
       value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 9007774982835831668, guid: 60db58a2ffbfe774e82d1f2f3210b89b, type: 3}
+      propertyPath: topWall
+      value: 
+      objectReference: {fileID: 2027438273137144043}
+    - target: {fileID: 9007774982835831668, guid: 60db58a2ffbfe774e82d1f2f3210b89b, type: 3}
+      propertyPath: bottomWall
+      value: 
+      objectReference: {fileID: 8301976457441240588}
+    - target: {fileID: 9007774982835831668, guid: 60db58a2ffbfe774e82d1f2f3210b89b, type: 3}
       propertyPath: cameraSize
       value: 5
       objectReference: {fileID: 0}
