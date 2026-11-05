@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 302995695348150617}
   - component: {fileID: 4063730811899349360}
   - component: {fileID: 3829797377226320808}
-  - component: {fileID: 8436942498798884059}
+  - component: {fileID: 8388945079784440693}
   - component: {fileID: 8290233090309859248}
   m_Layer: 0
   m_Name: Player
@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5936e94502f03842a3e3e3256540d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
+  sword: {fileID: 0}
   maxhealth: 250
   health: 250
   hasKey: 0
@@ -216,9 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eddfb2cd3d75996459d3bf317c6ddd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerUseWeapon
-  Pistol: {fileID: 8436942498798884059}
+  Shotgun: {fileID: 8388945079784440693}
   Sword: {fileID: 8290233090309859248}
---- !u!114 &8436942498798884059
+--- !u!114 &8388945079784440693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,19 +228,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 5040421287957204927}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff78df07aeee92044b66819b27b75c3e, type: 3}
+  m_Script: {fileID: 11500000, guid: b0e74d31768e3ac4499768575f625d1d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponBase
+  m_EditorClassIdentifier: Assembly-CSharp::ShotGun
   FirePosition: {x: 0, y: 0}
   BulletDirection: {x: 0, y: 0}
-  Bullet: {fileID: 0}
-  Damage: 0
-  AttackCount: 0
-  Uses: 0
-  MaxUses: 0
-  UseDelay: 0
+  Bullet: {fileID: 6087454983695486129, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+  Damage: 65
+  AttackCount: 1
+  Uses: 2
+  MaxUses: 2
+  UseDelay: 0.4
   InUseDelay: 0
-  LoadDelay: 0
+  LoadDelay: 1.4
   InLoadDelay: 0
 --- !u!114 &8290233090309859248
 MonoBehaviour:

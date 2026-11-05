@@ -1,0 +1,39 @@
+using UnityEngine;
+
+public class BulletMoveForward : MonoBehaviour
+{
+    public int damage;
+    private void FixedUpdate()
+    {
+        transform.position += transform.up/2;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Return if of same faction
+        if(collision.transform.CompareTag(tag)) return;
+
+        // Check for what todo since our code is so divided._.
+        if(collision.transform.CompareTag("RandomObject"))
+        {
+            // does nothing for now
+            Destroy(gameObject);
+            return;
+        }
+        if (collision.transform.CompareTag("Player"))
+        {
+            // Gets the players health data and deals damage
+            PlayerData Health = collision.transform.GetComponent<PlayerData>();
+            Destroy(gameObject);
+            Health.RemoveHealth(damage);
+        }
+        if (collision.transform.CompareTag("Enemy"))
+        {
+            EnemyHealthManager Health = collision.transform.GetComponent<EnemyHealthManager>();
+
+            Health.TakeDamage(damage);
+            Destroy(gameObject);
+            return;
+        }
+    }
+}

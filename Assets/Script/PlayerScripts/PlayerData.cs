@@ -4,15 +4,17 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     [SerializeField] private WeaponSword sword;
-    public int maxhealth = 100;
-    public int health = 90;
+    public int maxhealth = 250;
+    public int health = 250;
     public bool hasKey = false;
 
     public void GiveHealth(int amount)
     {
-       if (maxhealth > 0 && health < maxhealth)
+        health += amount;
+
+        if(health > maxhealth)
         {
-            health += amount;
+            health = maxhealth;
         }
     }
 
