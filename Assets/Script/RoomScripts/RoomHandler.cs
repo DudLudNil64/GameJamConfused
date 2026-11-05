@@ -6,6 +6,8 @@ public class RoomHandler : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float cameraSize;
+    [SerializeField] int minZombies;
+    [SerializeField] int maxZombies;
     [SerializeField] GameObject[] zombiePrefabs;
     bool moveCamera = false;
     private bool firstEnter = false;
@@ -45,7 +47,7 @@ public class RoomHandler : MonoBehaviour
 
     IEnumerator SpawnZombies(float duration)
     {
-        int amount = Random.Range(10, 15);
+        int amount = Random.Range(minZombies, maxZombies);
         for (int i = 0; i < amount; i++)
         {
             int randomIndex = Random.Range(1, zombiePrefabs.Length);
