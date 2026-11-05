@@ -9,7 +9,7 @@ public class ShotGun : WeaponBase
         // le gun work
         GameObject CurrentBullet = Instantiate(Bullet);
         // Gives the tag from the shooter so that you dont shoot yourself -Lud
-        CurrentBullet.tag = tag.ToString();
+        CurrentBullet.tag = tag;
         // Sets the transform -Lud
         CurrentBullet.transform.position = FirePosition;
         CurrentBullet.transform.rotation = transform.rotation;

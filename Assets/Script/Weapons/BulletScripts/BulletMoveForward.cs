@@ -22,22 +22,21 @@ public class BulletMoveForward : MonoBehaviour
         {
             // does nothing for now
             Destroy(gameObject);
-            return;
         }
         else if (collision.transform.CompareTag("Player"))
         {
             // Gets the players health data and deals damage
             PlayerData Health = collision.transform.GetComponent<PlayerData>();
+            if(Health != null ) Health.RemoveHealth(damage);
+
             Destroy(gameObject);
-            Health.RemoveHealth(damage);
         }
         else if (collision.transform.CompareTag("Enemy"))
         {
             EnemyHealthManager Health = collision.transform.GetComponent<EnemyHealthManager>();
+            if(Health != null ) Health.TakeDamage(damage);
 
-            Health.TakeDamage(damage);
             Destroy(gameObject);
-            return;
         }
     }
 }

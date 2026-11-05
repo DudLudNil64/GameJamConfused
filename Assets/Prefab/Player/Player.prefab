@@ -238,9 +238,9 @@ MonoBehaviour:
   AttackCount: 1
   Uses: 2
   MaxUses: 2
-  UseDelay: 0.4
+  UseDelay: 0.2
   InUseDelay: 0
-  LoadDelay: 1.4
+  LoadDelay: 0.78
   InLoadDelay: 0
 --- !u!114 &8290233090309859248
 MonoBehaviour:
@@ -261,7 +261,7 @@ MonoBehaviour:
   AttackCount: 1
   Uses: 1
   MaxUses: 1
-  UseDelay: 0.75
+  UseDelay: 0.4
   InUseDelay: 0
   LoadDelay: 0
   InLoadDelay: 0
