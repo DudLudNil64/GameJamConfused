@@ -11,7 +11,7 @@ public class ZombieKnigth : MonoBehaviour
     public Rigidbody2D EnemyBody;
 
     // SwordWeapon
-    public WeaponSword Sword;
+    public WeaponBase Sword;
 
     protected virtual void Start()
     {
@@ -28,7 +28,7 @@ public class ZombieKnigth : MonoBehaviour
         // follow the player
         dir = (player.position - transform.position).normalized; //-1 - 1
         EnemyBody.linearVelocity = dir * speed;
-        Sword.FirePosition = transform.position + (transform.up * Sword.AreaAttack);
+        Sword.FirePosition = transform.position + transform.up;
 
         Vector2 OffsetVector = transform.position - player.position;
         // Uses The OffsetVector To Rotate The Player Towards The Mouse

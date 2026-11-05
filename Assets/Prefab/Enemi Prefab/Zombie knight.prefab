@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieKnigth
   dir: {x: 0, y: 0, z: 0}
-  speed: 4
+  speed: 5
   player: {fileID: 0}
   enemyheal: 2
   EnemyBody: {fileID: 0}
@@ -222,15 +222,15 @@ MonoBehaviour:
   FirePosition: {x: 0, y: 0}
   BulletDirection: {x: 0, y: 0}
   Bullet: {fileID: 0}
-  Damage: 20
+  Damage: 25
   AttackCount: 1
   Uses: 1
   MaxUses: 1
-  UseDelay: 1
+  UseDelay: 0.88
   InUseDelay: 0
   LoadDelay: 0
   InLoadDelay: 0
-  AreaAttack: 0.4
+  AreaAttack: 0.5
   mask:
     serializedVersion: 2
     m_Bits: 4294967295
