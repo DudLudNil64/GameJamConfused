@@ -4,24 +4,21 @@ using UnityEngine.WSA;
 
 public class RoomHandler : MonoBehaviour
 {
-    [SerializeField] GameObject[] zombiePrefabs;
+<<<<<<< HEAD
+=======
+     [SerializeField] GameObject[] zombiePrefabs;
 
     private bool firstEnter = false;
 
-    public RoomHandler(GameObject[] zombiePrefabs)
-    {
-        this.zombiePrefabs = zombiePrefabs;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other) 
     {
         Debug.Log("Entered");
 
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")) 
         {
             Debug.Log("Player entered room: " + gameObject.name);
 
-            if (!firstEnter)
+            if (!firstEnter) 
             {
                 firstEnter = true;
                 Debug.Log("First enter - Spawning zombies");
@@ -29,10 +26,12 @@ public class RoomHandler : MonoBehaviour
             }
         }
     }
+        }
+    
 
     IEnumerator SpawnZombies(float duration)
     {
-        int amount = Random.Range(10, 15);
+        int amount = Random.Range(minZombies, maxZombies);
         for (int i = 0; i < amount; i++)
         {
             int randomIndex = Random.Range(1, zombiePrefabs.Length);
