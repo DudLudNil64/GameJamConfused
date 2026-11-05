@@ -13,14 +13,14 @@ public class ZombieJester : ZombieKnigth
         float Angle = Mathf.Atan2(OffsetVector.y, OffsetVector.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, Angle + 90);
 
-        /*
+        
         Collider2D playerBullet = Physics2D.OverlapCircle(transform.position, avoidRadius, mask);// detect certain things who enter in the mask
         if (playerBullet != null)
         {
             //gettt away from bullets
             EnemyBody.linearVelocity -= (Vector2)((playerBullet.transform.position - transform.position).normalized * speed * 3 * Time.deltaTime);
         }
-        */
+        
 
         
         dir = (player.position - transform.position).normalized;
