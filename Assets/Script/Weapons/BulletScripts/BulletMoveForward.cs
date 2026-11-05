@@ -1,8 +1,11 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class BulletMoveForward : MonoBehaviour
 {
     public int damage;
+    public string TAG;
+
     private void FixedUpdate()
     {
         transform.position += transform.up/2;
@@ -10,14 +13,12 @@ public class BulletMoveForward : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-
-        Debug.Log("BulletTag : " + tag + " CollisionTag : " + collision.transform.tag);
-
+        // Doesnt work....
+        if(transform.CompareTag("Untagged")) return;
         // Return if of same faction
-        if(collision.transform.CompareTag(tag)) return;
-
+        else if(collision.transform.CompareTag(tag)) return;
         // Check for what todo since our code is so divided._.
-        if(collision.transform.CompareTag("RandomObject"))
+        else if(collision.transform.CompareTag("RandomObject"))
         {
             // does nothing for now
             Destroy(gameObject);
