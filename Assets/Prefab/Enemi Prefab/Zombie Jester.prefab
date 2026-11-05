@@ -193,7 +193,7 @@ MonoBehaviour:
   speed: 7
   player: {fileID: 0}
   enemyheal: 20
-  EnemyBody: {fileID: 0}
+  EnemyBody: {fileID: 6059294753666484172}
   Sword: {fileID: -7891067259530686898}
   attackRange: 10
   mask:
