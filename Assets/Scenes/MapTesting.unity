@@ -1818,6 +1818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraScript
   speed: 10
   cameraSize: 5
+  zombiePrefabs: []
 --- !u!61 &645757371
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2076,6 +2077,67 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1001 &976723537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1159195649209667585, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159195649209667585, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1699341
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159195649209667585, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159195649209667585, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159195649209667585, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159195649209667585, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159195649209667585, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159195649209667585, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159195649209667585, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159195649209667585, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087454983695486129, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_Name
+      value: Slug
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419293285534342013, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da24c6e89424f854a83b519ec324e003, type: 3}
 --- !u!1001 &1083186558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2131,7 +2193,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5040421287957204927, guid: d904d54c3a6b60a419bf7b626125d6e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1732917825}
   m_SourcePrefab: {fileID: 100100000, guid: d904d54c3a6b60a419bf7b626125d6e1, type: 3}
 --- !u!1 &1434993071
 GameObject:
@@ -2212,6 +2277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraScript
   speed: 10
   cameraSize: 5
+  zombiePrefabs: []
 --- !u!61 &1668645468
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2333,6 +2399,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1732917815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5040421287957204927, guid: d904d54c3a6b60a419bf7b626125d6e1, type: 3}
+  m_PrefabInstance: {fileID: 1083186558}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1732917825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732917815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4722ff57e8687854093de3775158db75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomHandler
+  speed: 10
+  cameraSize: 0
+  zombiePrefabs: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2342,3 +2428,4 @@ SceneRoots:
   - {fileID: 508501467}
   - {fileID: 1668645470}
   - {fileID: 645757373}
+  - {fileID: 976723537}
