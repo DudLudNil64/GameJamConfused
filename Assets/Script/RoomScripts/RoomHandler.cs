@@ -54,7 +54,6 @@ public class RoomHandler : MonoBehaviour
     IEnumerator SpawnZombies(float duration)
     {
         int amount = Random.Range(minenemies, maxenemies);
-        WaitForSeconds wait = new WaitForSeconds(duration);
 
         for (int i = 0; i < amount; i++)
         {
@@ -63,10 +62,10 @@ public class RoomHandler : MonoBehaviour
             Vector3 randomPos = transform.position + new Vector3(Random.Range(-transform.localScale.x / 2, transform.localScale.x / 2), Random.Range(-transform.localScale.y / 2, transform.localScale.y / 2), 0f);
 
             GameObject zombieobj = Instantiate(selectedZombie, randomPos, Quaternion.identity);
-            yield return wait;
+            yield return new WaitForSeconds(duration);
         }
 
-        while (GameObject.FindGameObjectsWithTag("Enemy").Length < 0)
+        while (GameObject.FindGameObjectsWithTag("Enemy").Length <= 0)
         {
             GameObject.Destroy(bottomWall.GetComponent<BoxCollider2D>());
             haskey = true;
