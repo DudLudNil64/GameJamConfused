@@ -10,14 +10,14 @@ public class ZombieKnigth : MonoBehaviour
     public float enemyheal = 2;
     public Rigidbody2D EnemyBody;
 
-    // SwordWeapon
+    // SwordWeapon-Ludwig
     public WeaponBase Sword;
 
     protected virtual void Start()
     {
-        // find player
+        // find player-Omar
         player = FindAnyObjectByType<PlayerMovement>().transform;
-        // find enemy healt
+        // find enemy healt-Omar
         healthManager = GetComponent<EnemyHealthManager>();
 
         if (gameObject.GetComponent<Rigidbody2D>() != null) EnemyBody = gameObject.GetComponent<Rigidbody2D>();
@@ -27,13 +27,13 @@ public class ZombieKnigth : MonoBehaviour
     // Update is called once per frame
     protected virtual void FixedUpdate()
     {
-        // follow the player
+        // follow the player-Omar
         dir = (player.position - transform.position).normalized; //-1 - 1
         EnemyBody.linearVelocity = dir * speed;
         Sword.FirePosition = transform.position + transform.up;
 
         Vector2 OffsetVector = transform.position - player.position;
-        // Uses The OffsetVector To Rotate The Player Towards The Mouse
+        // Uses The OffsetVector To Rotate The Player Towards The Mouse-Ludwig
         float Angle = Mathf.Atan2(OffsetVector.y, OffsetVector.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, Angle + 90);
 

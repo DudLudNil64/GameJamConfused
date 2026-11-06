@@ -8,6 +8,7 @@ public class EnemyHealthManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //make curret Healt the same as max in the star-Omar
         currentHealth = maxHealth;
     }
 
@@ -18,7 +19,7 @@ public class EnemyHealthManager : MonoBehaviour
     }
 
 
-    //code to take damage
+    //code to take damage-omar
     public void TakeDamage(int Damage)
     {
         currentHealth -= Damage;
@@ -29,7 +30,7 @@ public class EnemyHealthManager : MonoBehaviour
     }
 
 
-    //coode to die, yea die.
+    //coode to die, yea die.-Omar
     void Die()
     {
         Destroy(gameObject);
