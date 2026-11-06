@@ -25,8 +25,6 @@ public class CameraFollow : MonoBehaviour
             // update camepra position
             transform.position = Smootposition;
 
-            // optional: make it always look at player
-            transform.LookAt(objetivo);
         }
     }
 }

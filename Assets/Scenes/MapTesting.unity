@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 278549789}
   - component: {fileID: 278549788}
   - component: {fileID: 278549787}
+  - component: {fileID: 278549791}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -256,6 +257,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &278549791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278549786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c42fc1fc46734141a7a669f9d4eb9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
+  objetivo: {fileID: 1169980908}
+  offset: {x: 0, y: 5, z: -50}
+  suavizado: 0.125
 --- !u!1 &441366118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,6 +2497,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d904d54c3a6b60a419bf7b626125d6e1, type: 3}
+--- !u!4 &1169980908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2872973904028170983, guid: d904d54c3a6b60a419bf7b626125d6e1, type: 3}
+  m_PrefabInstance: {fileID: 1083186558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1434993071
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,7 +2561,7 @@ PrefabInstance:
       objectReference: {fileID: 1044055374}
     - target: {fileID: 1006460445618928067, guid: e052d987c366803408f160066971e72f, type: 3}
       propertyPath: maxenemies
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1006460445618928067, guid: e052d987c366803408f160066971e72f, type: 3}
       propertyPath: minenemies
