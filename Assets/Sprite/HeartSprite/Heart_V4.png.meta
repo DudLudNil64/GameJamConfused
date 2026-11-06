@@ -114,9 +114,9 @@ TextureImporter:
       name: Heart_V4_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 2
-        width: 22
+        x: 0
+        y: 36
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -136,12 +136,12 @@ TextureImporter:
       name: Heart_V4_1
       rect:
         serializedVersion: 2
-        x: 5
+        x: 32
         y: 36
-        width: 22
+        width: 32
         height: 32
-      alignment: 9
-      pivot: {x: 0.49639806, y: 0.5000001}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -158,9 +158,9 @@ TextureImporter:
       name: Heart_V4_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 36
-        width: 22
+        x: 0
+        y: 2
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -180,9 +180,9 @@ TextureImporter:
       name: Heart_V4_3
       rect:
         serializedVersion: 2
-        x: 37
+        x: 32
         y: 2
-        width: 22
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -210,7 +210,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":2.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Heart_V4_0: -1688828909851307350
       Heart_V4_1: 1821233057724359896
