@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575394d14c5e842479792a7da660e592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthManager
-  maxHealth: 4
-  currentHealth: 4
+  maxHealth: 3
+  currentHealth: 3
 --- !u!114 &8702155040024028699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieKnigth
   dir: {x: 0, y: 0, z: 0}
-  speed: 5
+  speed: 3.5
   player: {fileID: 0}
   enemyheal: 2
   EnemyBody: {fileID: 0}

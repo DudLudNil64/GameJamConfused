@@ -10,7 +10,7 @@ public class ZombiePriest : ZombieKnigth
 
     protected override void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     protected override void FixedUpdate()
@@ -20,7 +20,6 @@ public class ZombiePriest : ZombieKnigth
         float Angle = Mathf.Atan2(OffsetVector.y, OffsetVector.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, Angle + 90);
 
-
         Collider2D playerBullet = Physics2D.OverlapCircle(transform.position, avoidRadius, mask);// detect certain things who enter in the mask
         if (playerBullet != null)
         {
@@ -28,19 +27,37 @@ public class ZombiePriest : ZombieKnigth
             EnemyBody.linearVelocity -= (Vector2)((playerBullet.transform.position - transform.position).normalized * speed * 3 * Time.deltaTime);
         }
 
-
+        if(!InSpawnDelay)
+        {
+            StartCoroutine("DelaySpawn");
+            StartCoroutine("SummonEnemy");
+        }
+        else if(Sword.CheckForUseability())
+        {
+            Sword.UseWeapon();
+            Sword.Reload();
+        }
 
         dir = (player.position - transform.position).normalized;
         // follow the player 
         if ((player.position - transform.position).magnitude > attackRange)
         {
             EnemyBody.linearVelocity = dir * speed;
-            StartCoroutine(SummonEnemy());
+            
         }
-        else if ((player.position - transform.position).magnitude < attackRange - 1)
+        else if ((player.position - transform.position).magnitude < attackRange - 4)
         {
             EnemyBody.linearVelocity = -dir * speed;
         }
+    }
+
+    public bool InSpawnDelay;
+    public float SpawnDelay;
+    IEnumerator DelaySpawn()
+    {
+        InSpawnDelay = true;
+        yield return new WaitForSeconds(SpawnDelay);
+        InSpawnDelay = false;
     }
 
     IEnumerator SummonEnemy()

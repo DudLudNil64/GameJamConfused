@@ -28,6 +28,8 @@ public class CameraRoom : MonoBehaviour
         Debug.Log("Entered");
         if (other.gameObject.CompareTag("Player"))
         {
+            if(other.gameObject.GetComponent<PlayerData>() == null) return;
+
             moveCamera = true;
             Camera.main.orthographicSize = cameraSize;
             Debug.Log("Move camera to room" + gameObject.name);

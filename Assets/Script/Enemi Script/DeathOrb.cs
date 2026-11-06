@@ -25,7 +25,7 @@ public class DeathOrb : ZombieJester
         {
             if(collision.gameObject.GetComponent<PlayerData>() != null)
             {
-                collision.gameObject.GetComponent<PlayerData>().health--;
+                collision.gameObject.GetComponent<PlayerData>().RemoveHealth(1);
                 Destroy(gameObject);
             }
             else

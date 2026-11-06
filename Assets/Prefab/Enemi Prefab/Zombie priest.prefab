@@ -173,8 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575394d14c5e842479792a7da660e592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthManager
-  maxHealth: 5
-  currentHealth: 5
+  maxHealth: 2
+  currentHealth: 2
 --- !u!114 &350896469567722405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,17 +188,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombiePriest
   dir: {x: 0, y: 0, z: 0}
-  speed: 4
+  speed: 1.5
   player: {fileID: 0}
-  enemyheal: 2
+  enemyheal: 0
   EnemyBody: {fileID: 6651723131499539888}
   Sword: {fileID: 5271712889438621310}
-  attackRange: 3
+  attackRange: 5
   mask:
     serializedVersion: 2
     m_Bits: 0
   avoidRadius: 7.9
   summonEnemy: {fileID: 2938031906021938226, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+  InSpawnDelay: 0
+  SpawnDelay: 0.99
 --- !u!114 &5271712889438621310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,11 +216,11 @@ MonoBehaviour:
   FirePosition: {x: 0, y: 0}
   BulletDirection: {x: 0, y: 0}
   Bullet: {fileID: 6087454983695486129, guid: da24c6e89424f854a83b519ec324e003, type: 3}
-  Damage: 1
+  Damage: 2
   AttackCount: 1
-  Uses: 3
-  MaxUses: 3
-  UseDelay: 0.4
+  Uses: 1
+  MaxUses: 1
+  UseDelay: 0
   InUseDelay: 0
   LoadDelay: 3.3
   InLoadDelay: 0

@@ -15,8 +15,10 @@ public class ZombieKnigth : MonoBehaviour
 
     protected virtual void Start()
     {
-        player = FindAnyObjectByType<PlayerMovement>().transform;// find player
-        healthManager = GetComponent<EnemyHealthManager>();// find enemy healt
+        // find player
+        player = FindAnyObjectByType<PlayerMovement>().transform;
+        // find enemy healt
+        healthManager = GetComponent<EnemyHealthManager>();
 
         if (gameObject.GetComponent<Rigidbody2D>() != null) EnemyBody = gameObject.GetComponent<Rigidbody2D>();
         else Debug.Log("Enemy Doesnt Have A Rigidbody2D");
