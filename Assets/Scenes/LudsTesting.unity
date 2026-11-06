@@ -837,6 +837,63 @@ MonoBehaviour:
   Heart4: {fileID: 1913835435}
   Heart5: {fileID: 109201637}
   HealthPerHeart: 1
+--- !u!1001 &1653077368
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 999184088195202932, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 999184088195202932, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 999184088195202932, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999184088195202932, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 999184088195202932, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999184088195202932, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999184088195202932, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999184088195202932, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999184088195202932, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999184088195202932, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938031906021938226, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+      propertyPath: m_Name
+      value: DeathOrb
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
 --- !u!1 &1657839654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,3 +1192,4 @@ SceneRoots:
   - {fileID: 612368695}
   - {fileID: 955413847}
   - {fileID: 1750319164}
+  - {fileID: 1653077368}
