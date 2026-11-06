@@ -10,7 +10,7 @@ public class ZombiePriest : ZombieKnigth
 
     protected override void Start()
     {
-        StartCoroutine(SummonEnemies());
+        
     }
 
     protected override void FixedUpdate()
@@ -35,6 +35,7 @@ public class ZombiePriest : ZombieKnigth
         if ((player.position - transform.position).magnitude > attackRange)
         {
             EnemyBody.linearVelocity = dir * speed;
+            StartCoroutine(SummonEnemy());
         }
         else if ((player.position - transform.position).magnitude < attackRange - 1)
         {
@@ -42,12 +43,12 @@ public class ZombiePriest : ZombieKnigth
         }
     }
 
-    IEnumerator SummonEnemies()
+    IEnumerator SummonEnemy()
     {
-        while (true)
-        {
-            GameObject zombieobj = Instantiate(summonEnemy, Random.insideUnitCircle , Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range(10, 20));
-        }
+        GameObject zombieobj = Instantiate(summonEnemy);
+
+        zombieobj.transform.position = transform.position + (Vector3)(Random.insideUnitCircle*3);
+
+        yield return new WaitForSeconds(0.5f);
     }
 }
