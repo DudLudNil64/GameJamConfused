@@ -66,7 +66,7 @@ public class RoomHandler : MonoBehaviour
             yield return wait;
         }
 
-        while (GameObject.FindGameObjectsWithTag("Enemy").Length < 0)
+        while (GameObject.FindGameObjectsWithTag("Enemy").Length <= 0)
         {
             GameObject.Destroy(bottomWall.GetComponent<BoxCollider2D>());
             haskey = true;

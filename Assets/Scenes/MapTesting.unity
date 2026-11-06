@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   objetivo: {fileID: 1169980908}
-  offset: {x: 0, y: 5, z: -50}
+  offset: {x: 0, y: 2, z: -50}
   suavizado: 0.125
 --- !u!1 &441366118
 GameObject:
@@ -2561,7 +2561,7 @@ PrefabInstance:
       objectReference: {fileID: 1044055374}
     - target: {fileID: 1006460445618928067, guid: e052d987c366803408f160066971e72f, type: 3}
       propertyPath: maxenemies
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1006460445618928067, guid: e052d987c366803408f160066971e72f, type: 3}
       propertyPath: minenemies

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5801869821757351390}
   - component: {fileID: 5434668726714020953}
   - component: {fileID: 6651723131499539888}
+  - component: {fileID: -3361796238742152411}
+  - component: {fileID: -8567291246178506035}
   m_Layer: 0
   m_Name: Zombie priest
   m_TagString: Enemy
@@ -158,3 +160,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-3361796238742152411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218961514898901841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be29a4548d5706742aa07bf8d6c6e50b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombiePriest
+  dir: {x: 0, y: 0, z: 0}
+  speed: 4
+  player: {fileID: 0}
+  enemyheal: 2
+  EnemyBody: {fileID: 6651723131499539888}
+  Sword: {fileID: 0}
+  attackRange: 3
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  avoidRadius: 10
+  summonEnemy: {fileID: 612873096141568430, guid: 8c77acafbe44f83479922382ebae2a2f, type: 3}
+--- !u!114 &-8567291246178506035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218961514898901841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575394d14c5e842479792a7da660e592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthManager
+  maxHealth: 200
+  currentHealth: 200
