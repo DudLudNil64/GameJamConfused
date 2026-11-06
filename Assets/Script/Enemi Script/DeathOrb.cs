@@ -1,29 +1,22 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DeathOrb : MonoBehaviour
+public class DeathOrb : ZombieJester
 {
     GameObject Player;
 
-    void Start()
+    protected override void Start()
     {
-        GameObject[] FindPlayer = GameObject.FindGameObjectsWithTag("Player");
-
-        foreach(GameObject obj in FindPlayer)
-        {
-            if(obj.GetComponent<PlayerData>() != null) Player = obj;
-        }
-
-        if(Player == null) Debug.Break();
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
-    void FixedUpdate()
-    {
-        // Uses The OffsetVector To Rotate The enemy Towards The Mouse
-        Vector2 OffsetVector = transform.position - Player.transform.position;
-        float Angle = Mathf.Atan2(OffsetVector.y, OffsetVector.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, Angle + 90);
 
-        transform.position += transform.up / 4;
+    protected override void FixedUpdate()
+    {
+        // OffsetVector
+        Vector2 OffsetVector = Player.transform.position - transform.position;
+        OffsetVector.Normalize();
+        // goes to player to kill it :)
+        transform.position += (Vector3)(speed * Time.deltaTime * OffsetVector);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
