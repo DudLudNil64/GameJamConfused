@@ -2555,7 +2555,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraRoom
   speed: 20
   cameraSize: 5
-  zombiePrefabs: []
 --- !u!4 &4976578395325807140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3883785408664518803, guid: 60db58a2ffbfe774e82d1f2f3210b89b, type: 3}
