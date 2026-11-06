@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6542658820047009742}
   - component: {fileID: 4383561377906833078}
   - component: {fileID: 1959978520752950144}
+  - component: {fileID: 4581175909610482847}
   m_Layer: 0
   m_Name: DeathOrb
   m_TagString: Untagged
@@ -110,7 +111,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -170,3 +171,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f5753c39dcb9b4184dd4317f11657b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathOrb
+--- !u!114 &4581175909610482847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938031906021938226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575394d14c5e842479792a7da660e592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthManager
+  maxHealth: 10
+  currentHealth: 10

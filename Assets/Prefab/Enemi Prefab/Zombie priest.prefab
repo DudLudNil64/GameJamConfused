@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5801869821757351390}
   - component: {fileID: 5434668726714020953}
   - component: {fileID: 6651723131499539888}
-  - component: {fileID: -3361796238742152411}
   - component: {fileID: -8567291246178506035}
+  - component: {fileID: 350896469567722405}
+  - component: {fileID: 5271712889438621310}
   m_Layer: 0
   m_Name: Zombie priest
   m_TagString: Enemy
@@ -160,7 +161,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-3361796238742152411
+--- !u!114 &-8567291246178506035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218961514898901841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575394d14c5e842479792a7da660e592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthManager
+  maxHealth: 5
+  currentHealth: 5
+--- !u!114 &350896469567722405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,14 +192,14 @@ MonoBehaviour:
   player: {fileID: 0}
   enemyheal: 2
   EnemyBody: {fileID: 6651723131499539888}
-  Sword: {fileID: 0}
+  Sword: {fileID: 5271712889438621310}
   attackRange: 3
   mask:
     serializedVersion: 2
     m_Bits: 0
-  avoidRadius: 10
-  summonEnemy: {fileID: 612873096141568430, guid: 8c77acafbe44f83479922382ebae2a2f, type: 3}
---- !u!114 &-8567291246178506035
+  avoidRadius: 7.9
+  summonEnemy: {fileID: 2938031906021938226, guid: 6a4abd09508bb1e45a627b8b2c50fb23, type: 3}
+--- !u!114 &5271712889438621310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,8 +208,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4218961514898901841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575394d14c5e842479792a7da660e592, type: 3}
+  m_Script: {fileID: 11500000, guid: b0e74d31768e3ac4499768575f625d1d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthManager
-  maxHealth: 200
-  currentHealth: 200
+  m_EditorClassIdentifier: Assembly-CSharp::ShotGun
+  FirePosition: {x: 0, y: 0}
+  BulletDirection: {x: 0, y: 0}
+  Bullet: {fileID: 6087454983695486129, guid: da24c6e89424f854a83b519ec324e003, type: 3}
+  Damage: 1
+  AttackCount: 1
+  Uses: 3
+  MaxUses: 3
+  UseDelay: 0.4
+  InUseDelay: 0
+  LoadDelay: 3.3
+  InLoadDelay: 0
