@@ -13,6 +13,7 @@ public class CameraRoom : MonoBehaviour
     {
         if (moveCamera)
         {
+            //Move camera smoothly to the new room - Wiktor
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, transform.position + new Vector3(0, 0, -10), speed);
 
             if (Vector3.Distance(Camera.main.transform.position, transform.position + new Vector3(0, 0, -10)) < 0.01f)
@@ -26,19 +27,15 @@ public class CameraRoom : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Entered");
+        //When player touches a room it moves the camera to it - Wiktor
         if (other.gameObject.CompareTag("Player"))
         {
             if(other.gameObject.GetComponent<PlayerData>() == null) return;
 
             moveCamera = true;
+            //Change camera size to match room size - Wiktor
             Camera.main.orthographicSize = cameraSize;
             Debug.Log("Move camera to room" + gameObject.name);
-
-            if (!firstEnter)
-            {
-                firstEnter = true;
-                Debug.Log("First enter");
-            }
         }
     }
 

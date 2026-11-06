@@ -19,6 +19,7 @@ public class RoomHandler : MonoBehaviour
 
     void Update()
     {
+        //Check if player has key and if it's close enough - Wiktor 
         if (haskey && (Vector3.Distance(FindAnyObjectByType<PlayerMovement>().transform.position, transform.position + new Vector3(0, 4, 0)) < 1.75f))
         {
             TMPro.gameObject.SetActive(true);
@@ -28,7 +29,7 @@ public class RoomHandler : MonoBehaviour
                 topWall.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
-        else
+        else //Else don't show anything - Wiktor
         {
             TMPro.gameObject.SetActive(false);
         }
@@ -38,6 +39,7 @@ public class RoomHandler : MonoBehaviour
     {
         Debug.Log("Entered");
 
+        //Check if the trigger is the player
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player entered room: " + gameObject.name);
@@ -55,6 +57,7 @@ public class RoomHandler : MonoBehaviour
     {
         int amount = Random.Range(minenemies, maxenemies);
 
+        //Spawn random amount of zombies between minenemies and maxenemies. Get a random zombie model every instantiate. - Wiktor
         for (int i = 0; i < amount; i++)
         {
             int randomIndex = Random.Range(1, zombiePrefabs.Length);
@@ -65,6 +68,7 @@ public class RoomHandler : MonoBehaviour
             yield return new WaitForSeconds(duration);
         }
 
+        //Check if there is enemies inside the room else give key and finish the current dungeon/room - Wiktor
         while (GameObject.FindGameObjectsWithTag("Enemy").Length > 0)
         {
             yield return null;
