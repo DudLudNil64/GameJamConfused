@@ -65,12 +65,13 @@ public class RoomHandler : MonoBehaviour
             yield return new WaitForSeconds(duration);
         }
 
-        while (GameObject.FindGameObjectsWithTag("Enemy").Length <= 0)
+        while (GameObject.FindGameObjectsWithTag("Enemy").Length > 0)
         {
-            GameObject.Destroy(bottomWall.GetComponent<BoxCollider2D>());
-            haskey = true;
             yield return null;
         }
+
+        bottomWall.GetComponent<BoxCollider2D>().enabled = false;
+        haskey = true;
     }
 
     IEnumerator LockDoors()
