@@ -9,7 +9,7 @@ public class Hearts : MonoBehaviour
             PlayerData data = collision.gameObject.GetComponent<PlayerData>();
             if(data != null)
             {
-                data.GiveHealth(10);
+                data.GiveHealth(1);
                 GameObject.Destroy(gameObject);
             }
         }
