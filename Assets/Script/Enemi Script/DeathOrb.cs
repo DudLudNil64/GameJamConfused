@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DeathOrb : ZombieJester
@@ -17,9 +16,11 @@ public class DeathOrb : ZombieJester
         OffsetVector.Normalize();
         // goes to player to kill it :)
         transform.position += (Vector3)(speed * Time.deltaTime * OffsetVector);
+
+        transform.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.transform.CompareTag("Player"))
         {
