@@ -7,8 +7,11 @@ public class Hearts : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerData data = collision.gameObject.GetComponent<PlayerData>();
-            data.GiveHealth(10);
-            GameObject.Destroy(gameObject);
+            if(data != null)
+            {
+                data.GiveHealth(1);
+                GameObject.Destroy(gameObject);
+            }
         }
     }
 }
