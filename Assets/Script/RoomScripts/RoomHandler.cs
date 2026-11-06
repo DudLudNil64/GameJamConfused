@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.WSA;
 
 public class RoomHandler : MonoBehaviour
 {
@@ -17,7 +15,7 @@ public class RoomHandler : MonoBehaviour
     private bool firstEnter = false;
     private bool haskey = false;
 
-    void Update()
+    void FixedUpdate()
     {
         //Check if player has key and if it's close enough - Wiktor 
         if (haskey && (Vector3.Distance(FindAnyObjectByType<PlayerMovement>().transform.position, transform.position + new Vector3(0, 4, 0)) < 1.75f))
