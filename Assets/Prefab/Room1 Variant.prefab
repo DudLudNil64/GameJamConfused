@@ -195,8 +195,8 @@ GameObject:
   - component: {fileID: 4955762944522033734}
   - component: {fileID: 6065017411873689822}
   m_Layer: 0
-  m_Name: Stardoor
-  m_TagString: Untagged
+  m_Name: Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1716,8 +1716,8 @@ GameObject:
   - component: {fileID: 5314101576369649614}
   - component: {fileID: 3957435818887269736}
   m_Layer: 0
-  m_Name: Stardoor
-  m_TagString: Untagged
+  m_Name: Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

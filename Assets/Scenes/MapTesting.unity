@@ -2626,6 +2626,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1467445414555731333, guid: e052d987c366803408f160066971e72f, type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467445414555731333, guid: e052d987c366803408f160066971e72f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2701582765259993191, guid: e052d987c366803408f160066971e72f, type: 3}
       propertyPath: m_Size.y
       value: 1.1
@@ -2681,6 +2689,14 @@ PrefabInstance:
     - target: {fileID: 4976578395325807140, guid: e052d987c366803408f160066971e72f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450311369581669561, guid: e052d987c366803408f160066971e72f, type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450311369581669561, guid: e052d987c366803408f160066971e72f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7636143450094400638, guid: e052d987c366803408f160066971e72f, type: 3}
       propertyPath: m_Size.x
