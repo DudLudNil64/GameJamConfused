@@ -29,11 +29,11 @@ public class PlayerUseWeapon : MonoBehaviour
         Sword.FirePosition = transform.position + transform.up;
         Shotgun.FirePosition = transform.position + transform.up;
 
-        // Sword stuff
+        // Sword stuff -Lud
         if (RightClick.IsPressed() && Sword.CheckForUseability()) Sword.UseWeapon();
-        // Gun stuff
+        // Gun stuff -Lud
         if (LeftClick.IsPressed() && Shotgun.CheckForUseability()) Shotgun.UseWeapon();
-        // Reloads
+        // Reloads -Lud
         if (Reload.IsPressed()) Shotgun.Reload();
     }
 }

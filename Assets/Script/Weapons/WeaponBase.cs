@@ -36,11 +36,14 @@ public class WeaponBase : MonoBehaviour
 
     public virtual void Reload()
     {
+        // starts said delay -Lud
         StartCoroutine("StartLoadDelay");
     }
 
     public virtual bool CheckForUseability()
     {
+        // simple if it can be used -Lud
+
         bool Check = true;
 
         if(InLoadDelay || InUseDelay) Check = false;
@@ -52,6 +55,7 @@ public class WeaponBase : MonoBehaviour
 
     public virtual IEnumerator StartUseDelay()
     {
+        // remove use and start delay -Lud
         Uses--;
 
         InUseDelay = true;
@@ -60,6 +64,8 @@ public class WeaponBase : MonoBehaviour
     }
     public virtual IEnumerator StartLoadDelay()
     {
+        // set uses to max and delay -Lud
+
         Uses = MaxUses;
 
         InLoadDelay = true;

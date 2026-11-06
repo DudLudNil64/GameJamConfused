@@ -5,7 +5,7 @@ public class EnemyHealthManager : MonoBehaviour
     public int maxHealth = 80;
     public int currentHealth;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Should be in update ._. -Lud
     void Start()
     {
         //make curret Healt the same as max in the star-Omar

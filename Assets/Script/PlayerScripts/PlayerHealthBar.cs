@@ -18,13 +18,14 @@ public class PlayerHealthBar : MonoBehaviour
     [SerializeField] int HealthPerHeart;
     void Start()
     {
+        // Get player on start -Lud
         PlayerData = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerData>();
     }
     void FixedUpdate()
     {
         int FrameHealth = PlayerData.health;
 
-        // This will only work for lossing health will fix for gaining
+        // works by a simple check on each heart if its under or above/same as its level of health -Lud
         if (FrameHealth < HealthPerHeart)
         {
             Heart1.sprite = DeadHeart;

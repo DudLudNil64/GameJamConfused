@@ -6,7 +6,7 @@ public class ShotGun : WeaponBase
 {
     public override void UseWeapon()
     {
-        // le gun work
+        // le gun work -Lud
         GameObject CurrentBullet = Instantiate(Bullet);
         // Gives the tag from the shooter so that you dont shoot yourself -Lud
         CurrentBullet.tag = tag;
@@ -16,7 +16,7 @@ public class ShotGun : WeaponBase
 
         CurrentBullet.GetComponent<BulletMoveForward>().damage = Damage;
 
-        // delay
+        // delay -Lud
         StartCoroutine("StartUseDelay");
     }
 }
