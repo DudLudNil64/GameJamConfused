@@ -7,7 +7,11 @@ public class Key : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerData data = collision.gameObject.GetComponent<PlayerData>();
-            data.GiveKey();
+            if(data != null)
+            {
+                data.GiveKey();
+                GameObject.Destroy(gameObject);
+            }
         }
     }
 }

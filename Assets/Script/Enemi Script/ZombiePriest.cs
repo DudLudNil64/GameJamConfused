@@ -34,6 +34,8 @@ public class ZombiePriest : ZombieKnigth
         }
         else if(Sword.CheckForUseability())
         {
+            Sword.FirePosition = transform.position + transform.up;
+
             Sword.UseWeapon();
             Sword.Reload();
         }
