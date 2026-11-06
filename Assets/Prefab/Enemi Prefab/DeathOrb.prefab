@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 2550227822814821625}
   - component: {fileID: 6542658820047009742}
   - component: {fileID: 4383561377906833078}
-  - component: {fileID: 1959978520752950144}
   - component: {fileID: 4581175909610482847}
+  - component: {fileID: 1959978520752950144}
   m_Layer: 0
   m_Name: DeathOrb
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,18 +159,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &1959978520752950144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2938031906021938226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64f5753c39dcb9b4184dd4317f11657b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DeathOrb
 --- !u!114 &4581175909610482847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,5 +171,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575394d14c5e842479792a7da660e592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthManager
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 1
+  currentHealth: 1
+--- !u!114 &1959978520752950144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938031906021938226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f5753c39dcb9b4184dd4317f11657b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathOrb
+  dir: {x: 0, y: 0, z: 0}
+  speed: 4
+  player: {fileID: 0}
+  enemyheal: 2
+  EnemyBody: {fileID: 0}
+  Sword: {fileID: 0}
+  attackRange: 3
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  avoidRadius: 10

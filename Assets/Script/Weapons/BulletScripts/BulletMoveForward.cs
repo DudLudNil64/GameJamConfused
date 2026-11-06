@@ -38,5 +38,9 @@ public class BulletMoveForward : MonoBehaviour
 
             Destroy(gameObject);
         }
+        else if(collision.transform.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
